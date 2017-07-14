@@ -236,7 +236,7 @@ class Whois extends WhoisClient
 					}
 
 				// Regular handler exists for the tld ?
-				if (($fp = @fopen('whois.'.$htld.'.php', 'r', 1)) and fclose($fp))
+				if (file_exists('whois.'.$htld.'.php'))
 				    {
 					$handler = $htld;
 					break;
